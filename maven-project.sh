@@ -11,34 +11,49 @@ mkdir -p $PROJECT_NAME/src/{main,test}/{java,resources}
 
 echo "<project>
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.github.$USER</groupId>
   <artifactId>$PROJECT_NAME</artifactId>
   <version>1</version>
+
   <dependencies>
+
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.7</version>
+      <version>3.8.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.4.0</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.4.0</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.easytesting</groupId>
-      <artifactId>fest-assert</artifactId>
-      <version>1.4</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.4.0</version>
+      <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.12.1</version>
+      <scope>test</scope>
+    </dependency>
+
     <dependency>
       <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>1.10.19</version>
-    </dependency>
-    <dependency>
-      <groupId>pl.pragmatists</groupId>
-      <artifactId>JUnitParams</artifactId>
-      <version>1.1.0</version>
+      <artifactId>mockito-core</artifactId>
+      <version>2.25.0</version>
     </dependency>
   </dependencies></project>
 " > $PROJECT_NAME/pom.xml

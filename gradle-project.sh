@@ -15,12 +15,20 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
+
 dependencies {
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4'
-    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
-    testCompile group: 'pl.pragmatists', name: 'JUnitParams', version: '1.1.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.0'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.0'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.4.0'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.1'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.25.0'
 }
 " > $PROJECT_NAME/build.gradle
 
