@@ -1,5 +1,5 @@
 # Java Project Scripts
-There are two project scripts, one for Gradle projects and the other for Maven projects. Both of them will create the neccessary project directory structure, add a build script and a .gitignore file, initialize an empty git repository and commit the build script and .gitignore file. The project will then be set for importing into your IDE (IntelliJ assumed).
+There are two project scripts, one for Gradle projects and the other for Maven projects. Both of them will create the necessary project directory structure, add a build script and a `.gitignore` file, initialize an empty git repository and commit the build script and `.gitignore` file. The project will then be set for importing into your IDE (IntelliJ assumed).
 
 After installing the script (see below) use it like this:
 
